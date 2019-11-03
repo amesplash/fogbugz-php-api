@@ -1,0 +1,76 @@
+{
+    "name": "amesplash/fogbugz-php-api",
+    "type": "library",
+    "description": "FogBugz API v2 PHP 7.3+ library",
+    "keywords": [
+        "php",
+        "fogbugz",
+        "fogbugz-api",
+        "fogbugz-php-api",
+        "fogbugz-api-wrapper",
+        "fogbugz-jsonapi",
+        "jsonapi",
+        "api-wrapper",
+        "api",
+        "helpdesk",
+        "issue-tracking"
+    ],
+    "homepage": "https://www.amesplash.co.uk/open-source",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Merlin Diavova",
+            "email": "merlin@amesplash.co.uk"
+        }
+    ],
+    "support": {
+        "docs": "https://github.com/amesplash/fogbugz-php-api",
+        "issues": "https://github.com/amesplash/fogbugz-php-api/issues",
+        "source": "https://github.com/amesplash/fogbugz-php-api"
+    },
+    "require": {
+        "php": "^7.3",
+        "ext-json": "^1.7",
+        "psr/http-client": "^1.0",
+        "psr/http-factory": "^1.0",
+        "psr/http-message": "^1.0"
+    },
+    "require-dev": {
+        "amesplash/php-coding-standard": "dev-master",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
+        "ekino/phpstan-banned-code": "dev-master#0c1c6d8f700ff378bc98266765a63b7e7ecffb50",
+        "eloquent/phony-phpunit": "^5.0",
+        "jakub-onderka/php-parallel-lint": "^1.0",
+        "nyholm/psr7": "^1.2",
+        "phan/phan": "^2.3",
+        "phpspec/phpspec": "^6.0",
+        "phpstan/extension-installer": "^1.0",
+        "phpstan/phpstan": "^0.11.19",
+        "squizlabs/php_codesniffer": "^3.5",
+        "sunrise/http-client-curl": "^1.2",
+        "symfony/var-dumper": "^4.3",
+        "vimeo/psalm": "^3.6"
+    },
+    "autoload": {
+        "psr-4": { "Amesplash\\FogBugzApi\\": "src/" }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "spec\\Amesplash\\FogBugzApi\\": "tests/spec/",
+            "Amesplash\\FogBugzApi\\Test\\Unit\\": "tests/unit",
+            "Amesplash\\FogBugzApi\\Test\\Functional\\": "tests/functional"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

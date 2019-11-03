@@ -1,0 +1,5 @@
+/.gitattributes export-ignore
+/.gitignore export-ignore
+/.unisonprofile export-ignore
+/.unisonprofile-example export-ignore
+/phpcs.xml.dist export-ignore

@@ -1,0 +1,8 @@
+vendor/
+phpcs.xml
+composer.lock
+phpcs.log
+.phpcs-cache
+.php_cs-cache
+lab.md
+.unisonprofile

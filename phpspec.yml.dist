@@ -1,0 +1,6 @@
+bootstrap: "./tests/bootstrap.php"
+suites:
+  amesplash_fogbugzapi:
+    namespace: Amesplash\FogBugzApi
+    psr4_prefix: Amesplash\FogBugzApi
+    spec_path: "%paths.config%/tests"
