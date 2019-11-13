@@ -128,6 +128,11 @@ interface Collection extends
     public function filter(Closure $p) : self;
 
     /**
+     * Slice the array
+     */
+    public function slice(int $offset, ?int $length = null) : array;
+
+    /**
      * Applies the given function to each element in the collection and returns
      * a new collection with the elements returned by the function.
      *

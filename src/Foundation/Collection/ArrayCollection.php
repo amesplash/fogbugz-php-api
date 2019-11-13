@@ -10,13 +10,12 @@ use Amesplash\FogBugzApi\Foundation\State\ImmutableType;
 use ArrayIterator;
 use Closure;
 use Traversable;
-use const ARRAY_FILTER_USE_BOTH;
 use function array_filter;
-use function array_intersect_key;
 use function array_key_exists;
 use function array_keys;
 use function array_map;
 use function array_search;
+use function array_slice;
 use function array_values;
 use function count;
 use function end;
@@ -25,6 +24,7 @@ use function is_array;
 use function json_encode;
 use function reset;
 use function spl_object_hash;
+use const ARRAY_FILTER_USE_BOTH;
 
 class ArrayCollection extends Immutable implements Collection
 {
@@ -186,6 +186,14 @@ class ArrayCollection extends Immutable implements Collection
         return $this->createFromArray(
             array_map($func, $this->elements)
         );
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function slice(int $offset, ?int $length = null) : array
+    {
+        return array_slice($this->elements, $offset, $length, true);
     }
 
     /**
